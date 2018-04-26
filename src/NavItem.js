@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const NavItem = ({ divider, children, href = '', onClick, ...props }) => {
   if (divider) return <li className="divider" />;
   const a = onClick ? (
-    <a onClick={onClick}>{children}</a>
+    <div onClick={onClick}>{children}</div>
   ) : (
-    <a href={href}>{children}</a>
+    <div href={href}>{children}</div>
   );
   return <li {...props}>{a}</li>;
 };

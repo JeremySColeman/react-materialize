@@ -69,7 +69,7 @@ class Button extends Component {
     const classes = cx(orientation, clickOnly);
     return (
       <div className={cx('fixed-action-btn', classes)}>
-        <a className={className}>{this.renderIcon()}</a>
+        <div className={className}>{this.renderIcon()}</div>
         <ul>
           {React.Children.map(this.props.children, child => {
             return <li key={idgen()}>{child}</li>;
